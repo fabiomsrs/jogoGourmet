@@ -1,15 +1,18 @@
 package domain;
 
-import java.util.Objects;
-
 public class Node {
     private String value;
-    private Node parent;
     private Node left;
     private Node right;
 
     public Node(String value) {
         this.value = value;
+    }
+
+    public Node(Node node) {
+        this.value = node.value;
+        this.left = node.left;
+        this.right = node.right;
     }
 
     public Node getLeft() {
@@ -18,7 +21,6 @@ public class Node {
 
     public void setLeft(Node left) {
         this.left = left;
-        this.left.setParent(this);
     }
 
     public Node getRight() {
@@ -27,11 +29,6 @@ public class Node {
 
     public void setRight(Node right) {
         this.right = right;
-        this.right.setParent(this);
-    }
-
-    public void setParent(Node parent) {
-        this.parent = parent;
     }
 
     public String getValue() {
@@ -42,11 +39,13 @@ public class Node {
         this.value = value;
     }
 
-    public Boolean isRoot() {
-        return Objects.isNull(parent);
-    }
-
     public String getQuestion() {
         return "O prato que você pensou é "+ value +"?";
+    }
+
+    public void wrongAnswerAddNewNode(String plate, String plateIs) {
+        this.setRight(new Node(this.getValue()));
+        this.setValue(plateIs);
+        this.setLeft(new Node(plate));
     }
 }
