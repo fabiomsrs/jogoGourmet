@@ -46,7 +46,7 @@ public class Node {
         return Objects.isNull(parent);
     }
 
-    public void askQuestion() {
-        System.out.println("O prato que você pensou é "+ value +"?");
+    public String getQuestion() {
+        return "O prato que você pensou é "+ value +"?";
     }
 }
