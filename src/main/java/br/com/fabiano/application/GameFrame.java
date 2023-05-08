@@ -1,7 +1,7 @@
-package application;
+package br.com.fabiano.application;
 
-import domain.Node;
-import domain.logic.Game;
+import br.com.fabiano.domain.Node;
+import br.com.fabiano.domain.logic.Game;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;

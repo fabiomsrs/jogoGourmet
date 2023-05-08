@@ -1,4 +1,6 @@
-import application.GameFrame;
+package br.com.fabiano;
+
+import br.com.fabiano.application.*;
 
 import javax.swing.SwingUtilities;
 

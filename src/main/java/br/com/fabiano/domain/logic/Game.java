@@ -1,7 +1,7 @@
-package domain.logic;
+package br.com.fabiano.domain.logic;
 
-import application.GameFrame;
-import domain.Node;
+import br.com.fabiano.application.GameFrame;
+import br.com.fabiano.domain.Node;
 
 import javax.swing.JOptionPane;
 import java.util.Objects;
