@@ -3,7 +3,7 @@ package br.com.fabiano.domain.logic;
 import br.com.fabiano.application.GameFrame;
 import br.com.fabiano.domain.Node;
 
-import javax.swing.JOptionPane;
+import javax.swing.*;
 import java.util.Objects;
 
 public class Game {
@@ -23,7 +23,6 @@ public class Game {
             if (result == JOptionPane.YES_OPTION) {
                 if (Objects.isNull(node.getLeft())) {
                     JOptionPane.showMessageDialog(gameFrame, "Acertei de novo!");
-                    break;
                 }
                 node = node.getLeft();
             }
